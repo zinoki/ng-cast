@@ -1,5 +1,4 @@
 angular.module('video-player')
-
-.component('videoPlayer', {
-  // TODO
-});
+  .component('videoPlayer', {
+    templateURL: '/src/templates/videoPlayer.html'
+  });
