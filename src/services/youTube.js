@@ -3,11 +3,10 @@ angular.module('video-player')
     this.getYoutube = function(params, callback) {
       return $http({
         method: 'GET',
-        url: 'https://www.googleapis.com/youtube/v3/search',
-        params: {key: window.YOUTUBE_API_KEY} // think about this
-      }).then(function successCallback(data) {
-        console.log('Good Request', data);
-        callback(response);
+        url: params,
+      }).then(function successCallback(response) {
+        console.log('Good Request', response.data.items);
+        callback(response.data.items);
       }, function errorCallback(response) {
         console.log('Bad Request!!!!!');
       });
