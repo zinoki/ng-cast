@@ -5,7 +5,7 @@ angular.module('video-player')
       this.videos = $window.exampleVideoData;
       this.currentVideo = this.videos[0];
       this.params = '';
-      this.selectVideo = (index) => {
+      this.onClick = (index) => {
         this.currentVideo = this.videos[index];
       };
       this.callBack = (data) => {
